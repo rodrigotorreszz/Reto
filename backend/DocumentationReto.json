@@ -1,0 +1,185 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "this is my api of Reto",
+    "description": "<3!!!",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://virtserver.swaggerhub.com/institutotecnicorica-5e7/Reto/1.0.0",
+      "description": "SwaggerHub API Auto Mocking"
+    }
+  ],
+  "paths": {
+    "/Tasks": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Get a Task",
+        "description": "aqui se ven las **tasks**",
+        "operationId": "get-Tasks",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Put a Tasks",
+        "description": "aqui actualizamos una tasks",
+        "operationId": "put-Tasks",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tasks_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Post a Tasks",
+        "description": "aqui agregamos una **Tasks**",
+        "operationId": "post-Tasks",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tasks_body_1"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "DELETE Tasks",
+        "description": "aqui se borran las tasks",
+        "operationId": "delete-Tasks",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DeviceRegistrationInfo": {
+        "type": "object",
+        "properties": {
+          "uri": {
+            "type": "string",
+            "format": "uri",
+            "example": "http://10.0.0.220:8080"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "0729a580-2240-11e6-9eb5-0002a5d5c51b"
+          }
+        }
+      },
+      "Tasks_body": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "oxzay3ygmd8j6"
+            }
+          },
+          "description": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "4pmtak4hf4e51"
+            }
+          },
+          "completed": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "n1qkuimpfo3k5"
+            }
+          }
+        }
+      },
+      "Tasks_body_1": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "euycu3cd5soe0"
+            }
+          },
+          "description": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "fgly0rxx0aa09"
+            }
+          },
+          "completed": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "h7j11sjesb2wd"
+            }
+          }
+        }
+      }
+    }
+  }
+}
