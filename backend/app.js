@@ -1,18 +1,11 @@
 
 import express from "express";
 import cors from "cors";
-import taskRoutes from './src/routes/task.js';
+import taskRoutes from "./src/Routes/task.js";
 import cookieParser from "cookie-parser";
 import swaggerUi from "swagger-ui-express";
 import fs from "fs";
 import path from "path";
-
-
-
-   
-
-
-
 
 const app = express();
 
