@@ -1,6 +1,6 @@
 
 const taskController = {};
-import taskModel from "../models/task.js";
+import taskModel from "../Models/task.js";
 
 // SELECT
 taskController.gettasks = async (req, res) => {
